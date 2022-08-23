@@ -37,7 +37,7 @@ function App() {
   useEffect(async ()  => {
     // enters if we get token
     if (typeof (id) !== 'undefined' && id !== null && id !== "" ) {
-      document.cookie = id;
+      document.cookie = `jwt=${id};`;
       setToken(id);
       localStorage.setItem("count",`${0}`);
       redirect(`http://${window.location.host}/success`)
